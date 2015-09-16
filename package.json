@@ -1,0 +1,19 @@
+{
+  "name": "people-groups-dijkstra",
+  "version": "1.0.0",
+  "description": "An simple library which implements dijkstra algorithim in a people array measuring the shortest path to one student to reach another",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/dansoah/people-groups-dijkstra"
+  },
+  "author": "Danilo Rechi (fixmyprinter@danilorechi.net)",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/dansoah/people-groups-dijkstra/issues"
+  },
+  "homepage": "https://github.com/dansoah/people-groups-dijkstra"
+}
