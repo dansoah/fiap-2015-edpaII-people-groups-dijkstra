@@ -18,14 +18,14 @@ module.exports = {
 
         if( Number.isInteger(s1) && Number.isInteger(s2) ){
             var match_12_id = s1;
-            var match_12_weight = 0;
+            var match_12_cost = 0;
             var match_21_id = s2;
-            var match_21_weight = 0;
+            var match_21_cost = 0;
         }else if(typeof s1.id !== 'undefined' && typeof s2.id !== 'undefined'){
             var match_12_id = s2.id;
-            var match_12_weight = s2.weight;
+            var match_12_cost = s2.cost;
             var match_21_id = s1.id;
-            var match_21_weight = s1.weight;
+            var match_21_cost = s1.cost;
         }else{
             return false;
         }
@@ -40,10 +40,10 @@ module.exports = {
             return false;
 
         if(p1.knows.filter( (colleague) => colleague.id === match_21_id ).length == 0 )
-            p1.knows.push({id:match_21_id, weight:match_21_weight});
+            p1.knows.push({id:match_21_id, cost:match_21_cost});
 
         if(p2.knows.filter( (colleague) => colleague.id === match_12_id ).length == 0 )
-            p2.knows.push({id:match_12_id, weight:match_12_weight});
+            p2.knows.push({id:match_12_id, cost:match_12_cost});
 
     },
 
@@ -52,7 +52,7 @@ module.exports = {
     explain : ()=>students.forEach((student)=>{
 
         console.log("Student #"+student.id+" knows:");
-        student.knows.forEach((colleague) => console.log(" -"+colleague.id+" ("+colleague.weight+")"));
+        student.knows.forEach((colleague) => console.log(" -"+colleague.id+" ("+colleague.cost+")"));
         console.log("\r\n");
     }),
 
@@ -65,7 +65,7 @@ module.exports = {
         distance[from] = 0;
 
         source_student.knows.forEach( (colleague) => {
-            
+
         });
 
     }
